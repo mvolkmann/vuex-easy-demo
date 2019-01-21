@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="todo-list">
     <h2>To Do List</h2>
     <div>
       {{uncompletedCount}} of {{todos.length}} remaining
@@ -96,7 +96,7 @@ export default {
 };
 </script>
 )
-<style scoped>
+<style lang="scss" scoped>
 button:disabled {
   background-color: gray;
   color: white;

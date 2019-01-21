@@ -1,5 +1,5 @@
 <template>
-  <li>
+  <li class="todo">
     <input type="checkbox" :checked="todo.done" @change="onToggleDone">
     <span :class="doneClass">{{todo.text}}</span>
     <button @click="onDeleteTodo">Delete</button>
