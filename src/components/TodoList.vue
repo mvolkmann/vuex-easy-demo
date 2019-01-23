@@ -38,7 +38,7 @@
 
 <script>
 /* eslint-disable no-console */
-import {mapGetters, mapState} from 'vuex';
+import {mapState} from 'vuex';
 import {
   Checkboxes,
   Input,
@@ -54,11 +54,13 @@ export default {
   name: 'TodoList',
   components: {Checkboxes, Input, RadioButtons, Select, TextArea, Todo},
   computed: {
-    ...mapGetters(['uncompletedCount']),
     ...mapState({
       todos: state => state.todos,
       todoText: state => state.todoText
-    })
+    }),
+    uncompletedCount() {
+      return this.todos.filter(t => !t.done).length;
+    }
   },
   data() {
     return {
