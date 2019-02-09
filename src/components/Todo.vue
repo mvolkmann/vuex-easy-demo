@@ -29,26 +29,38 @@ export default {
     }
   },
   computed: {
+    /*
     doneClass() {
       return 'done-' + this.todo.done;
     }
+    */
+    doneClass: function() {
+      return 'done-' + this.todo.done;
+    }
+  },
+  destroyed() {
+    console.log('Todo.vue destroyed: entered');
   }
 };
 </script>
 
-<style lang="scss" scoped>
-$done-color: gray;
+<style lang="scss">
+.todo {
+  $done-color: gray;
 
-button {
-  margin-left: 10px;
-}
+  margin-bottom: 5px;
 
-li {
-  margin-top: 5px;
+  button {
+    margin-left: 10px;
+  }
 
-  .done-true {
-    color: $done-color;
-    text-decoration: line-through;
+  li {
+    margin-top: 5px;
+
+    .done-true {
+      color: $done-color;
+      text-decoration: line-through;
+    }
   }
 }
 </style>

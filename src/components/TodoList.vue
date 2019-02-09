@@ -98,19 +98,25 @@ export default {
 };
 </script>
 )
-<style lang="scss" scoped>
-button:disabled {
-  background-color: gray;
-  color: white;
-}
+<style lang="scss">
+.todo-list {
+  button {
+    margin-left: 10px;
+  }
 
-.colors {
-  margin: 15px 0;
-}
+  button:disabled {
+    background-color: gray;
+    color: white;
+  }
 
-ul.unstyled {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
+  .colors {
+    margin: 15px 0;
+  }
+
+  ul.unstyled {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
 }
 </style>

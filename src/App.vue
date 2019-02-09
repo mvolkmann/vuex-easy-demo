@@ -53,8 +53,17 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
+body {
   font-family: sans-serif;
   padding-left: 10px;
+}
+
+button {
+  border-radius: 4px;
+  padding: 4px;
+}
+
+select, textarea {
+  border-color: lightgray;
 }
 </style>
